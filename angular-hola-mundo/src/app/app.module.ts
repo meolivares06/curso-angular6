@@ -3,18 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './componentes/app.component';
 import { PruebaComponent } from './componentes/prueba/prueba.component';
-import { ItemComponent } from './componentes/item/item.component';
-import { ListContainerComponent } from './componentes/list-container/list-container.component';
+import { DestinoViajeComponent } from './componentes/destino-viaje/destino-viaje.component';
+import { ListaDestinoComponent } from './componentes/lista-destino/lista-destino.component';
+import { InputFormComponent } from './componentes/input-form/input-form.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     PruebaComponent,
-    ItemComponent,
-    ListContainerComponent
+    DestinoViajeComponent,
+    ListaDestinoComponent,
+    InputFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
