@@ -1,2 +1,4 @@
 <input type="text" name="titulo" #titulo/>
 <input type="submit" name="titulo" (click)="agregar(titulo)"/>
+
+<app-prueba *ngFor="let destino of destinos" (clicked)="seleccionar(destino)"></app-prueba>

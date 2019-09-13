@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DestinoViaje} from '../../models/destino-viaje.model';
 
 @Component({
   selector: 'app-input-form',
@@ -7,12 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputFormComponent implements OnInit {
 
-  constructor() { }
+  destinos: DestinoViaje[] = [];
+  constructor() {
+    this.destinos = [
+      new DestinoViaje('a', 'b'),
+      new DestinoViaje('a', 'b'),
+      new DestinoViaje('a', 'b')
+    ];
+  }
 
   ngOnInit() {
   }
 
   agregar(titulo: HTMLInputElement) {
     console.log(titulo.value);
+  }
+
+  seleccionar(destino: DestinoViaje) {
+    console.log(destino);
+    this.destinos.push(destino);
   }
 }
